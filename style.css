@@ -1,0 +1,221 @@
+:root {
+
+    /* ### Primary */
+
+    --p: hsl(300, 43%, 22%);
+    --main-headerClr: hsl(300, 43%, 22%);
+    --ver-textclr: hsl(333, 80%, 67%);
+    
+    /* ### Neutral */
+    
+    --hdr-textClr: hsl(303, 10%, 53%);
+    --rating-bgClr: hsl(300, 24%, 96%);
+    --bgClr: hsl(300, 24%, 96%);
+    --pClr: hsl(0, 0%, 100%);
+
+    
+    --font: 'League Spartan', sans-serif;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    text-align: center;
+}
+
+.wrapper {
+    background-color: var(--bgClr);
+    background: url(/images/bg-pattern-top-mobile.svg) no-repeat left top, url(/images/bg-pattern-bottom-mobile.svg) no-repeat left bottom;
+    background-size: contain;
+    background-attachment: fixed;
+    width: 23.4375em;
+    max-width: 100em;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper  h2 {
+    font-size: 2.6rem;
+    padding: 1em 0.1em 0;
+    /* padding-left: 3em; */
+    line-height: 0.9;
+    color: var(--main-headerClr);
+}
+
+.main-header + p {
+    margin: 1em 1em 2em;
+    font-size: 1.1rem;
+    color: var(--hdr-textClr);
+    font-weight: 500;
+}
+
+.rating > div {
+    margin: 1em 1em;
+    padding: 1.2em 1em;
+    color: var(--p);
+    background-color: hsl(300, 24%, 96%);;
+    border-radius: 0.3em;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.rating > div:last-child {
+    margin-bottom: 4em;
+}
+
+.lower > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1.3em 1em;
+    padding: 1.9em 3em 1.9em 2.1em;
+    background-color: var(--main-headerClr);
+    color: var(--rating-bgClr);
+    border-radius: 0.3em;
+}
+
+.lower .person-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 1.7em;
+}
+.lower img {
+    border-radius: 50%;
+    width: 3.125em;
+    height: 3.125em;
+    margin-right: 1.3em;    
+}
+
+.lower > div:last-child {
+    margin-bottom: 7em;
+}
+
+
+.person-info > p, .person-info ~ p, div .person-details {
+    text-align: left;
+}
+
+.person-info + p {
+    font-weight: 500;
+}
+
+.person-details p:nth-child(1) {
+    font-weight: 700;
+}
+
+.person-details p:nth-child(2) {
+    color: var(--ver-textclr);
+    font-weight: 400;
+}
+
+@media screen and (min-width: 1000px) {
+    .wrapper {
+        background: url(/images/bg-pattern-top-desktop.svg) no-repeat left top,
+             url(/images/bg-pattern-bottom-desktop.svg) no-repeat right bottom;
+        background-attachment: fixed;
+        width: 75em;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .upper {
+        display: inline-block;
+        padding-left: 1.77em;
+        flex: 1 2 30em;
+    }
+
+    h2.main-header {
+        font-size: 3rem;
+        text-align: left;
+        padding: 0 3em 0 0;
+        margin-bottom: 0.5em;
+        line-height: 0.9;
+        color: var(--main-headerClr);
+    }
+
+    .main-header + p {
+        margin: 0 4.5em 3em 0;
+        text-align: left;
+        padding-right: 1em;
+        line-height: 1.5;
+    }
+
+    .middle {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        margin-bottom: 6em;
+        margin-right: 2.1em;
+        justify-content: space-evenly;
+    }
+
+    .middle div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 0;
+        padding: .55em 1em;
+    }
+
+    .middle .rating-one {
+        margin-right: 5em;
+        width: 25em;
+    }
+
+    .middle .rating-two {
+        width: 25em;
+        margin-right: 2.5em;
+    }
+
+    .middle .rating-three {
+        margin-right: 0.1em;
+        padding-right: 1em;
+        width: 25em;
+    }
+
+    .stars img {
+        margin: 0.25em;
+    }
+
+    .person-one {
+        margin-left: 0;
+    }
+    .lower > div {
+        width: 21em;
+        margin: auto 0.5em auto;
+    }
+    .lower > div:last-child {
+        margin: 2.3em auto auto 0.7em;
+    }
+
+    .lower > div:nth-child(1) {
+        margin: 0 0.7em 2.7em 0;
+    }
+
+    .lower > div:nth-child(2) {
+        margin: 1.1em 0.7em auto;
+    }
+    
+    
+    .rating > div:last-child {
+        margin-bottom: 0;
+    }
+    .lower {
+        display: flex;
+    }
+}
